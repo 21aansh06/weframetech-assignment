@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app';
 import { SEO } from '../components/SEO';
-import '../styles/globals.css';
+import "../src/app/globals.css"
 
 // Error Boundary Component
 import React from 'react';
@@ -53,15 +53,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         console.log(metric);
       }
     };
-
-    // Lazy load web vitals
-    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-      getCLS(reportWebVitals);
-      getFID(reportWebVitals);
-      getFCP(reportWebVitals);
-      getLCP(reportWebVitals);
-      getTTFB(reportWebVitals);
-    });
   }, []);
 
   return (
