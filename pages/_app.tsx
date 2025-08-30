@@ -44,16 +44,16 @@ class ErrorBoundary extends React.Component<
 }
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // Performance monitoring
-  React.useEffect(() => {
-    // Report web vitals
-    const reportWebVitals = (metric: any) => {
-      if (process.env.NODE_ENV === 'production') {
-        // Send to analytics service
-        console.log(metric);
-      }
-    };
-  }, []);
+  // // Performance monitoring
+  // React.useEffect(() => {
+  //   // Report web vitals
+  //   const reportWebVitals = (metric: any) => {
+  //     if (process.env.NODE_ENV === 'production') {
+  //       // Send to analytics service
+  //       console.log(metric);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <ErrorBoundary>
